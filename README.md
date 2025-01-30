@@ -1,74 +1,71 @@
-# Bicycle Store Application
+# 🚴‍♂️ Bicycle Store Application
 
-## Project Overview
+## 📌 Overview
 
-The **Bicycle Store Application** is a full-stack e-commerce platform designed for seamless bicycle purchases. It provides role-based authentication, product management, and secure payment integration. The application ensures a smooth user experience, responsive design, and data security.
+The **CStore** is an intuitive e-commerce platform designed for seamless bicycle purchases. It features role-based authentication, product management, and secure payments to ensure a smooth and secure user experience.
 
-## Features
+## ✨ Key Features
 
-### 🔐 User Registration & Authentication
+### 🔐 Authentication & Security
 
-- Secure user registration with name, email, and password.
-- Passwords are securely hashed before being stored.
-- Role-based authentication (default: customer, admin manually assigned).
-- Users can log in via email and password.
-- **JWT Authentication** for session management.
-- Logout feature to remove JWT token and redirect to login.
+- Secure user registration & login (name, email, password).
+- Passwords are **hashed** before storage.
+- **Role-based access** (Customers & Admins).
+- **JWT Authentication** for user sessions.
+- Logout removes JWT token and redirects to login.
 
-### 🌍 Public Routes
+### 🌍 Public Pages
 
-#### Home Page
+#### 🏠 Home
 
-- **Navbar:** Logo, navigation items, and authentication buttons.
-- **Banner Section:** Special offers and promotions.
-- **Featured Bicycles:** Display up to 6 bicycles with a "View All" option.
-- **Extra Section:** Testimonials or other e-commerce-related content.
-- **Footer:** Important links, social media icons, and contact details.
+- **Navbar**: Logo, menu links, login/signup buttons.
+- **Hero Banner**: Featured promotions & special offers.
+- **Featured Bicycles**: Displays up to 6 products with a "View All" option.
+- **Extra Section**: Testimonials & reviews.
+- **Footer**: Contact details & social links.
 
-#### All Bicycles Page
+#### 🚲 Bicycles Page
 
-- **Search Functionality:** Search by brand, name, or category.
-- **Filters:** Price range, model, brand, category, and availability.
-- **Dynamic Results:** Updates based on search and filter selections.
-- **Bicycle Cards:** Display details including name, brand, model, price, and category.
+- **Search & Filters**: Search by brand, name, category & price.
+- **Dynamic Listings**: Updates based on user input.
+- **Detailed Bicycle Cards**: Name, brand, model, price & category.
 
-#### Bicycle Details Page
+#### 📄 Bicycle Details Page
 
-- Displays product image and full specifications.
+- Displays product image, specs, and pricing.
 - "Buy Now" button redirects to the checkout page.
 
-#### About Page
+#### ℹ️ About Page
 
-- Provides details about the bicycle store and its mission.
+- Store mission & brand information.
 
 ### 🔒 Private Routes
 
-#### Checkout Page
+#### 🛒 Checkout Page
 
-- Allows users to order bicycles.
-- Ensures ordered quantities do not exceed available stock.
-- **Order Form:** Includes product details, user details, total price calculation, and payment method.
-- **Payment Integration:** Supports SurjoPay, Stripe, or other payment gateways.
-- "Order Now" button finalizes the purchase.
+- Users can purchase bicycles securely.
+- **Stock Validation**: Orders are limited to available inventory.
+- **Order Summary**: Product details, user info, total price, and payment method.
+- **Payment Integration**: Supports SurjoPay, Stripe, etc.
 
-#### Dashboard (Role-Based Access)
+#### 📊 Dashboard
 
-- **Admin Dashboard:** Manage users (deactivate accounts), products (CRUD operations), and orders.
-- **User Dashboard:** View orders and manage profile settings.
-- Users can update passwords securely (requires the current password for validation).
+- **Admin Panel**: Manage users, products (CRUD), and orders.
+- **User Dashboard**: View order history, update profile & change password securely.
 
-## 📌 Tech Stack
+---
 
-- **Frontend:** React.js, Tailwind CSS
-- **Backend:** Node.js, Express.js
+## 🔧 Tech Stack
+
+- **Frontend:** React.js, Tailwind CSS, Redux, Typescript
+- **Backend:** Node.js, Express.js, Typescript
 - **Database:** MongoDB
-- **Authentication:** Firebase, JWT
-- **Hosting & Deployment:** Vercel / Netlify
-- **Payment Gateway:** SurjoPay / Stripe
+- **Hosting & Deployment:** Vercel
+- **Payment Gateway:** Stripe
 
 ## 🚀 Installation & Setup
 
-### Backend Setup
+### 🖥 Backend
 
 ```sh
 cd server
@@ -76,10 +73,14 @@ npm install
 npm start
 ```
 
-### Frontend Setup
+### 🌐 Frontend
 
 ```sh
 cd client
 npm install
 npm start
 ```
+
+## 🌐 Live Demo
+
+🔗 [Live Application](https://cycle-store-three.vercel.app/) _(Update when deployed)_
