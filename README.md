@@ -1,8 +1,8 @@
-# 🚴‍♂️ Bicycle Store Application
+# 🚴‍♂️ CStore
 
 ## 📌 Overview
 
-The **CStore** is an intuitive e-commerce platform designed for seamless bicycle purchases. It features role-based authentication, product management, and secure payments to ensure a smooth and secure user experience.
+The **Bicycle Store Application** is an intuitive e-commerce platform designed for seamless bicycle purchases. It features role-based authentication, product management, and secure payments to ensure a smooth and secure user experience.
 
 ## ✨ Key Features
 
