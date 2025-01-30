@@ -1,107 +1,85 @@
-# Bicycle Store API
+# Bicycle Store Application
 
-A robust Express.js application built with TypeScript and integrated with MongoDB using Mongoose to manage a Bicycle Store. This application supports managing bicycles, processing orders, and tracking revenue with comprehensive error handling.
+## Project Overview
 
----
+The **Bicycle Store Application** is a full-stack e-commerce platform designed for seamless bicycle purchases. It provides role-based authentication, product management, and secure payment integration. The application ensures a smooth user experience, responsive design, and data security.
 
 ## Features
 
-- **Bicycle Management**:
+### 🔐 User Registration & Authentication
 
-  - Create, read, update, and delete bicycle records.
-  - Filter bicycles by name, brand, or type.
+- Secure user registration with name, email, and password.
+- Passwords are securely hashed before being stored.
+- Role-based authentication (default: customer, admin manually assigned).
+- Users can log in via email and password.
+- **JWT Authentication** for session management.
+- Logout feature to remove JWT token and redirect to login.
 
-  - CRUD URL
-    for All Operation-
-    GET :
+### 🌍 Public Routes
 
-  ```bash
-    http://localhost:5000/api/products
+#### Home Page
 
-  ```
+- **Navbar:** Logo, navigation items, and authentication buttons.
+- **Banner Section:** Special offers and promotions.
+- **Featured Bicycles:** Display up to 6 bicycles with a "View All" option.
+- **Extra Section:** Testimonials or other e-commerce-related content.
+- **Footer:** Important links, social media icons, and contact details.
 
-  Create Product-
-  POST :
+#### All Bicycles Page
 
-  ```bash
-   http://localhost:5000/api/products
+- **Search Functionality:** Search by brand, name, or category.
+- **Filters:** Price range, model, brand, category, and availability.
+- **Dynamic Results:** Updates based on search and filter selections.
+- **Bicycle Cards:** Display details including name, brand, model, price, and category.
 
-  ```
+#### Bicycle Details Page
 
-  Get Singal Product -
-  GET :
+- Displays product image and full specifications.
+- "Buy Now" button redirects to the checkout page.
 
-  ```bash
-   http://localhost:5000/api/products/:(Id Give Here)
+#### About Page
 
-  ```
+- Provides details about the bicycle store and its mission.
 
-  Update Product -
-  PUT :
+### 🔒 Private Routes
 
-  ```bash
-   http://localhost:5000/api/products/:(id and data give here)
+#### Checkout Page
 
-  ```
+- Allows users to order bicycles.
+- Ensures ordered quantities do not exceed available stock.
+- **Order Form:** Includes product details, user details, total price calculation, and payment method.
+- **Payment Integration:** Supports SurjoPay, Stripe, or other payment gateways.
+- "Order Now" button finalizes the purchase.
 
-  Delete Product -
-  DELETE :
+#### Dashboard (Role-Based Access)
 
-  ```bash
-   http://localhost:5000/api/products/(id give here)
+- **Admin Dashboard:** Manage users (deactivate accounts), products (CRUD operations), and orders.
+- **User Dashboard:** View orders and manage profile settings.
+- Users can update passwords securely (requires the current password for validation).
 
-  ```
+## 📌 Tech Stack
 
-- **Order Management**:
+- **Frontend:** React.js, Tailwind CSS
+- **Backend:** Node.js, Express.js
+- **Database:** MongoDB
+- **Authentication:** Firebase, JWT
+- **Hosting & Deployment:** Vercel / Netlify
+- **Payment Gateway:** SurjoPay / Stripe
 
-  - Place orders for bicycles.
-  - Automatically adjust inventory based on order quantity.
-  - Mark bicycles as out of stock when inventory is depleted.
+## 🚀 Installation & Setup
 
-  Create Order -
-  POST :
+### Backend Setup
 
-  ```bash
-   http://localhost:5000/api/orders(product data give here)
-
-  ```
-
-- **Revenue Calculation**:
-
-  - Calculate total revenue from all orders using MongoDB aggregation.
-
-Get Totale Ravenue Calculate -
-GET :
-
-```bash
- http://localhost:5000/api/orders/revenue
-
+```sh
+cd server
+npm install
+npm start
 ```
 
-- **Error Handling**:
+### Frontend Setup
 
-  - Standardized error responses with detailed error messages and stack traces.
-
-- **Built with TypeScript**:
-  - Strongly typed codebase for better maintainability and error reduction.
-
----
-
-## Getting Started
-
-Follow these instructions to set up the project on your local machine.
-
-### Prerequisites
-
-- Node.js (v18 or higher)
-- MongoDB (local or cloud-based instance)
-- A package manager like `npm`
-
-### Installation
-
-1. **Clone the repository**:
-
-   ```bash
-   git clone https://github.com/ruhitbaidya/L2-Assignment-2.git
-
-   ```
+```sh
+cd client
+npm install
+npm start
+```
